@@ -1,0 +1,116 @@
+
+body {
+    & > header {
+        height: auto;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        & > nav {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            align-content: center;
+            background-color: #eaeaea;
+
+            & > h1 {
+                font-size: 1.5rem;
+                font-weight: var(--font-weight-bold);
+                margin: 1rem 2rem;
+
+                & > a {
+                    text-decoration: none;
+                    color: #333;
+                }
+            }
+
+            & > ul {
+                list-style: none;
+                align-self: center;
+                display: grid;
+                justify-content: end;
+
+                & > li {
+                    & > a {
+                        padding: 0.6rem 2rem;
+                        border-radius: 5px;
+                        text-decoration: none;
+                        background-color: #333;
+                        color: #fff;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    & > main {
+        padding-top: 80px;
+        
+        & > article {
+            width: 550px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: 300px repeat(3, auto);
+            margin-bottom: 2rem;
+            border: 1px solid #eaeaea;
+            background-color: #e6ebec;
+            border-radius: 5px;
+
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px 5px 0 0;
+            }
+
+            & > p:nth-child(3) {
+                margin-top: -20px;
+                font-size: 0.8rem;
+            }
+
+            & > p:nth-child(4):before {
+                content: open-quote;
+            }
+
+            & > p:nth-child(4):after {
+                content: close-quote;
+            }
+
+            & > :nth-child(n + 2) {
+                padding: 0.7rem 0.5rem;
+            }
+
+            & > div {
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 0.5rem;
+                font-size: 0.8rem;
+
+                & > * {
+                    margin-right: 0.5rem;
+                }
+
+                & > a {
+                    /* button style */
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    background-color: #333;
+                    color: #fff;
+                }
+
+                & > form > button {
+                    /* button style */
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    background-color: #e92424;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

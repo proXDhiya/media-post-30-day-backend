@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/style/main.css")
+        link(rel="stylesheet", href="/style/add.css")
+        title Add Post
+    body
+        form(action="/add", method="POST")
+            h1 Add Post
+            input(type="text", name="title", placeholder="Title")
+            input(type="text", name="img", placeholder="Image URL")
+            input(type="text", name="date", placeholder="Date")
+            input(type="text", name="description", placeholder="Description")
+            input(type="submit", value="Add")
+            a(href="/") Home

@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/style/main.css")
+        link(rel="stylesheet", href="/style/add.css")
+        title Update Post
+    body
+        form(action=`/update/${post.id}`, method="POST")
+            h1 Update Post
+            input(type="text", name="title", placeholder="Title" value=post.title)
+            input(type="text", name="img", placeholder="Image URL" value=post.img)
+            input(type="text", name="date", placeholder="Date" value=post.date)
+            input(type="text", name="description", placeholder="Description" value=post.description)
+            input(type="submit", value="Update")
+            a(href="/") Home

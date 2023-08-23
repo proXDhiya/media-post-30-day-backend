@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/style/main.css")
+        link(rel="stylesheet", href="/style/page.css")
+        title Posts
+    body
+        header
+            nav
+                h1
+                    a(href="/") Home
+                ul
+                    li
+                        a(href="/add") Add
+        main
+            each item in data
+                article
+                    - id = item.id
+                    img(src=item.img || "https://via.placeholder.com/150")
+                    h2= item.title || "No title"
+                    p= item.date || "No date"
+                    p= item.description || "No description"
+                    div
+                        a(href="/update/" + id) Update
+                        form(action="/delete/" + id, method="POST")
+                            button(type="submit") Delete
